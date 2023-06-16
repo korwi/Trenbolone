@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+:root {
+    --background-color: rgb(6, 11, 25);
+    --border-color: rgb(255, 255, 255, 0.1);
+    --highlight-color: rgb(206, 206, 206);
+    --font-family1: 'DM Serif Display', serif;
+    --font-family2: 'Playfair Display', serif;
+    --font-family3: 'Source Code Pro', monospace;
+  }
+  * {
+    box-sizing: border-box;
+    max-width: 100vmax;
+  }
+
+h4 {
+    font-family: var(--font-family1);
+    font-weight: 500;
+    font-size: 36px;
+    color: white;
+    width: 100%;
+    font-style: italic;
+    text-align: center;
+    z-index: 3;
+    margin: 0;
+    pad: 0;
+
+}
+
+  h2{
+    font-family: var(--font-family2);
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    margin: 0;
+    pad: 0;
+
+  }
+
+  h3, a {
+    font-family: var(--font-family3);
+    font-weight: 500;
+    font-size: 24px;
+    color: white;
+    
+    z-index: 3;
+  }
+
+  
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--highlight-color);
+  }
+
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0rem;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  
+  nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  nav .nav-section {
+    padding: 1.5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #nav-mobile-section {
+    display: flex;
+    flex-basis: 100%;
+    z-index: 2;
+  }
+
+  
+  #nav-link-section {
+    flex-basis: 50%;
+    gap: 3rem; 
+  }
+
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  #blob {
+    background-color: white;
+    height: 20vmax;
+    aspect-ratio: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(90, 202, 246), rgb(240, 87, 199));
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+  }
+  
+  #blur {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+  }
+  
+  h1 {
+    font-family: var(--font-family1);
+    font-weight: 400;
+    font-size: 150px;
+    padding: 0%;
+    margin: 10px;
+    color: white;
+    z-index: 3;
+  }
+  
+  /* -- Links -- */
+  
+  #links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    padding: 1rem;
+  }
+  
+  .meta-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .meta-link > :is(span, a) {
+    font-family: "Rubik", sans-serif;
+    color: white;
+  }
+  
+  .meta-link > .label {
+    width: 100px; 
+    text-align: right;
+  }
+  
+  .meta-link > a {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .meta-link > a.source {
+    color: rgb(94, 106, 210);
+  }
+  
+  .meta-link > a:is(:hover, :focus) > i {
+    color: white;  
+  }
+  
+  .meta-link > a.youtube {
+    color: rgb(239, 83, 80);
+  }
+  
+  .meta-link > a.youtube > i {
+    padding-top: 0.2rem; 
+  }
+  
+  .meta-link > a > i {
+    height: 1rem;
+    line-height: 1rem;
+  }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+  }
+
+.Sub {
+    font-family: var(--font-family2);
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    z-index: 3;
+    margin: 0;
+    padding: 19px;
+}
+
+.mainArticle {
+    display: grid;
+    justify-content: left;
+    align-items: left;
+    z-index: 200;
+    padding-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+  
+p, a {
+      font-family: var(--font-family3);
+      font-weight: 400;
+      color: white;
+      font-size: 20px;
+      margin: 0px;
+      z-index: 3;
+      padding: 7px;
+      margin: 10px;
+    }
+
+ul, li {
+    font-family: var(--font-family3);
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+    z-index: 3;
+    list-style-type: circle; list-style-position: inside; 
+  }
+
+.img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    flex-wrap: wrap;
+
+}
+img {
+    width: 400px; /* you can use % */
+    height: auto;
+}
+
+.list {
+  margin-left: 40px;
+  margin-right: 40px;
+}
